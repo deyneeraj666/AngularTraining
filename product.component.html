@@ -1,0 +1,19 @@
+<table border="2"  width="500">
+    <tr>
+      <th>Product_ID</th>
+      <th>Product Name</th>
+      <th>Price</th>
+      <th>Category</th>
+      <th>Qty</th>
+    </tr>
+  
+    <tr *ngFor="let item of prod_list">
+      <td>{{item.pid}}</td>
+      <td>{{item.pname}}</td>
+      <td>{{item.price}}</td>
+      <td>{{item.category}}</td>
+      <td>{{item.qty}}</td>
+
+    </tr>
+  
+  </table>
