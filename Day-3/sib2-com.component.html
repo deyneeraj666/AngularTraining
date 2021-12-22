@@ -1,0 +1,15 @@
+<fieldset>
+    <legend> Sort By :</legend>
+    <div style="background-color: aqua; text-align: center; width: 100%;  ">
+       
+        <select [(ngModel)]="option">
+            <option >Eno</option>
+            <option >Ename</option>
+            <option>Ejob</option>
+            <option >Esalary</option>
+            <option >Edeptno</option>
+        </select>
+        <button (click)="sorted()">Sort</button>
+    </div>
+</fieldset> 
+

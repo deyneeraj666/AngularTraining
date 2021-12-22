@@ -1,0 +1,26 @@
+<style>
+    table, th, td {
+    border: 1px solid black;
+  }
+</style>
+  <div>
+    <table style="background-color:chartreuse;" >
+        <tr>
+                <th>Eno</th>
+                <th>Ename</th>
+                <th>Ejob</th>
+                <th>Esalary</th>
+                <th>Edeptno</th>      
+        </tr>
+       
+        <tr *ngFor="let e of sortedArray">
+            <td>{{e.Eno}}</td>
+            <td>{{e.Ename}}</td>
+            <td>{{e.Ejob}}</td>
+            <td>{{e.Esalary}}</td>
+            <td>{{e.Edeptno}}</td>
+        </tr>
+    </table>
+
+  </div>
+  
