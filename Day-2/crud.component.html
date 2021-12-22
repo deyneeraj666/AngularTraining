@@ -1,0 +1,75 @@
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  
+  .row {margin: 0 -5px;}
+  
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .card { 
+    box-shadow: 0 8px 8px 0 rgba(231, 27, 12, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #2cd3a1;
+    margin-bottom: 20px;
+  }
+</style>
+<fieldset>
+    <legend>Input Product Details</legend>
+    Product ID :<input [disabled]="isProdnoDisabled" type="text"  [(ngModel)]="p_id" />
+     <br/><br/>
+     Product Name :<input type="text"  [(ngModel)]="p_name"    />
+     <br/><br/>
+     Price :<input type="text"  [(ngModel)]="p_price"   />
+     <br/><br/>
+     Category :<input type="text"  [(ngModel)]="p_category"   />
+     <br/><br/>
+     Quantity :<input type="text"  [(ngModel)]="p_quantity"   />
+     <br/><br/>
+     <br/><br/>
+    <p>Enter Your Choice:</p>
+    <input type="button"  value="Product Details" (click)="getProds()"  /> ||
+    <input type="button"  value="Add product" (click)="addProds()"  /> ||
+    <input type="button"  value="Update Product" (click)="updateProds()"  /> ||
+    <input type="button"  value=" Reset" (click)="clearFields()"  />
+    <hr/>
+</fieldset>
+<body>
+   
+    <div  class="row">
+      <div *ngFor="let p of prodsArray" class="column">
+        <div   class="card">
+          <p>Product ID : {{p.pid}}</p>
+          <p>Product Name :{{p.pname}}</p>
+          <p>Product Price :{{p.price}}</p>
+          <p>Product Category :{{p.category}}</p>
+          <p>Product Quantity :{{p.qty}}</p>
+
+        <button href="javascript:void(0);" (click)="selectProds(p.pid)">Select</button> |
+        <button href="javascript:void(0);" (click)="deleteProds(p.pid)">Delete</button>
+        </div>
+        
+      </div>
+    </div>
+    <tr *ngIf="prodsArray.length == 0">
+        <td colspan="4" align="center" style="color:red;"> ** No records found ** </td>
+      </tr>
+</body>
