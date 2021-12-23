@@ -1,0 +1,72 @@
+<style>
+    #d1
+    {
+        margin-left: 40px;
+        margin-top: 30px;
+        
+    }
+    input{
+        background-color: aqua;
+    }
+    .bg1{ background-color :  rgb(193, 236, 236);  }
+    .bg2{ background-color :  rgb(101, 180, 101);  }
+    .bg3{ background-color :  rgb(132, 142, 172);  }
+    td,th,h1
+    {
+            padding-left: 30px;
+    }
+    button{
+        background-color: rgb(206, 206, 245);
+        margin-left: 45px;
+    }
+    
+</style>
+<div id=d1>
+    <b>~~Salary Range~~</b>
+    <br>
+    <hr />
+    Min : <input type="number" [(ngModel)]="m"  />
+    <br>
+    <br>
+    Max : <input type="number"  [(ngModel)]="mx" />
+    <br>
+    <br>
+    <button (click)="getData_click()"> Get Data</button>
+   
+</div>
+
+<div>
+    <style>
+        .bg1{ background-color :  rgb(193, 236, 236);  }
+        .bg2{ background-color :  rgb(101, 180, 101);  }
+        .bg3{ background-color :  rgb(182, 185, 194);  }
+        td,th,h1{
+            padding-left: 30px;
+        }
+    </style>
+    <hr />
+    <h1> Employee Table</h1>
+    <table border="2"  style="width: 30%; height: 200px;margin-left: 40px;" cellSpacing="0"  cellpadding="10">
+        <tr  class="bg1">
+               
+                <th>Name</th>
+                <th>Salary</th>
+        </tr>
+        <tr   *ngFor="let u of userArray | rangepipe:min:max ;  let i = index;  let x = even; let y = odd;" [ngClass]="{bg2:x,  bg3:y}">
+            <td> {{u.name}}  </td>
+            <td>{{u.salary | currency: "INR" }} </td>
+           
+        </tr>
+        <tr *ngIf="min==0 && max ==0" >
+            <td colspan="2" style="padding-left: 200px; color: crimson;">**No Records**</td>
+        </tr>
+        <tr *ngIf="min>max" >
+            <td colspan="2" style="padding-left: 100px; color: rgb(241, 11, 57);">**Max salary should be greater than Min salary**</td>
+        </tr>
+       <!-- <tr *ngIf=".length()==0" >
+            <td colspan="2" style="padding-left: 100px; color: rgb(241, 11, 57);">**No records found in these range!**</td>
+        </tr> -->
+
+    </table>
+    <hr />
+</div>
