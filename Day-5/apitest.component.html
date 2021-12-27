@@ -1,0 +1,13 @@
+<h1>Server Communication </h1>
+<button (click)="getdata_Click()">Get Data</button>
+<hr />
+<div  class="row">
+   
+  <div *ngFor="let c of userarr" class="column">
+    <div   class="card">
+     <h3><img style="width:70px; height:50px; border-radius: 50%;" src={{c.avatar}}></h3>
+     <p><b>{{c.first_name}} {{c.last_name}}</b></p>
+     <p>{{c.email}}</p>
+    </div>
+  </div>
+</div>
