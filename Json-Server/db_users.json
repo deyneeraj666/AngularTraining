@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "email": "robert@gmail.com",
+      "password": "$2a$10$lsPVt9sHc8W03cgfwbYAu.CjtbLGvo74nGVCRl3jjytWzyvLIajdm",
+      "id": 1
+    },
+    {
+      "email": "niroj@gmail.com",
+      "password": "$2a$10$RGExMOjxO.48.Be6bEphFObXKa4NeeAZEXLvKcQXPAUsoCKH8K3TS",
+      "id": 2
+    },
+    {
+      "email": "demo@gmail.com",
+      "password": "$2a$10$2uiIFvpB7FWMd8/7DfmFBOLB/pE6MZGMlXe/Q1KtnHWt70BSRaToS",
+      "id": 3
+    },
+    {
+      "email": "tom@gmail.com",
+      "password": "$2a$10$peU2/FKJrvFsaTucMskHjeOhGd/Wd9IS.TLGq0imsfS27Jj8FiGFq",
+      "id": 4
+    },
+    {
+      "email": "rob@gmail.com",
+      "password": "$2a$10$o5hCWGG9dDFLp5s1ljIU9u1oDqDIkV0KQTiVA7MgJ26tNKXZP4NSy",
+      "id": 5
+    },
+    {
+      "email": "de@gmail.com",
+      "password": "$2a$10$vqKch68mckAxMNqzhniFlOnt1UZXw9e4kKv9AirhTPrK3CgQa89Xu",
+      "id": 6
+    },
+    {
+      "email": "f@gmail.com",
+      "password": "$2a$10$o3D3DTQHKQOUjxVWHbehIeaTN8Eo6Wc.b8CR97481Om8zzlnC6sXi",
+      "id": 7
+    },
+    {
+      "email": "e@gmai.com",
+      "password": "$2a$10$GofRrO85/aqPHCUM1mpHZu.WswBOH/0nwsXn.cV8UL8JMGeW09QRy",
+      "id": 8
+    },
+    {
+      "email": "Nir@gmail.com",
+      "password": "$2a$10$1Vuw7P8QBIQg9htq33Ivru8ZhE.G1.gZxie7xgG7BWkeSCy7XEDZq",
+      "id": 9
+    },
+    {
+      "email": "c@gmail.com",
+      "password": "$2a$10$A45VMYgtgFxtuV37ZHJQK.zHIMZqcef15gox26Go1WERd0DZqdAwu",
+      "id": 10
+    },
+    {
+      "email": "m@gmail.com",
+      "password": "$2a$10$pe/JuFa4DIJgakVnyFxLU.x1JtPbrZ0IZgX1tI6JoZuE4XPiXJYxO",
+      "id": 11
+    },
+    {
+      "email": "w@gmail.com",
+      "password": "$2a$10$/EU2vc44D.t0szFFcK3gler.MwJuTKzBPtv4cpfWJ0V.kla2K/3nK",
+      "id": 12
+    }
+  ]
+}
