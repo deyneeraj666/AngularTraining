@@ -1,0 +1,61 @@
+<style>
+    .error
+    {
+         color:red;
+    }
+</style>
+
+<form [formGroup]="formComponent" (submit)="submit_click()">
+    <fieldset>
+        <legend>Vehicle Registration Form</legend>
+         Owner Name:
+        <input type="text" formControlName="name"  />
+        <span *ngIf="formComponent.controls['name'].invalid && formComponent.controls['name'].dirty" class="error">Owner Name is required</span>
+        <br><br>
+         Contact Number:
+        <input type="text" formControlName="number"  />
+        <span *ngIf="formComponent.controls['number'].invalid && formComponent.controls['number'].dirty" class="error"> Contact number is required</span>
+      
+        <br><br>
+        
+        Owner Email:
+        <input type="text" formControlName="email"  />
+        <span *ngIf="formComponent.controls['email'].invalid && formComponent.controls['email'].dirty" class="error">Email is required</span>
+        <br><br>
+
+
+        Vehicle Registration Number:
+        <input type="text" formControlName="reg_number" placeholder=""  />
+        <span *ngIf="formComponent.controls['reg_number'].invalid && formComponent.controls['reg_number'].dirty" class="error">Regstration number is required</span>
+        <span *ngIf="formComponent.controls['reg_number'].errors?.['pattern']"  class="error">Registration number should be in format:TS10AB1234 </span>
+        
+        
+        
+        <br><br>
+        Address:
+        <input type="text" formControlName="address"  />
+        <span *ngIf="formComponent.controls['address'].invalid && formComponent.controls['address'].dirty" class="error">Address is required</span>
+        <br><br>
+        Model:
+        <input type="text" formControlName="model"  />
+        <span *ngIf="formComponent.controls['model'].invalid && formComponent.controls['model'].dirty" class="error">Model is required</span>
+        
+        <br><br>
+        Color:
+        <input type="text" formControlName="color"  />
+        <span *ngIf="formComponent.controls['color'].invalid && formComponent.controls['color'].dirty" class="error">Color is required</span>
+        <br><br>
+        Year:
+        <input type="text" formControlName="year"  />
+        <span *ngIf="formComponent.controls['year'].invalid && formComponent.controls['year'].dirty" class="error">Year should be between 2012 to 2021</span>
+       
+        <br><br>
+        <button [disabled]="formComponent.invalid">Register</button>
+    </fieldset>
+</form>
+
+
+<br>
+<hr />
+
+
